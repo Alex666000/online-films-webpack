@@ -19,7 +19,6 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import cls from './MovieDetails.module.scss';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import {
     getMovieDetailsData,
@@ -29,6 +28,7 @@ import {
 import { movieDetailsReducer } from '../../testing';
 import { renderMovieBlock } from './renderBlock';
 import { fetchMovieById } from '../../model/services/fetchMovieById/fetchMovieById';
+import cls from './MovieDetails.module.scss';
 
 interface MovieDetailsProps {
     className?: string;

@@ -40,10 +40,10 @@ export const MoviesFilters = memo((props: MoviesFiltersProps) => {
 
     return (
         <Card
-            className={classNames(cls.moviesFilters, {}, [className])}
+            className={classNames(cls.MoviesFilters, {}, [className])}
             padding="24"
         >
-            <VStack gap="32">
+            <VStack gap="24">
                 <Input
                     onChange={onChangeSearch}
                     value={search}

@@ -97,3 +97,9 @@
         transform: rotate(-90deg);
     }
 }
+
+@media (max-width: 480px) {
+    .SidebarRedesigned {
+        max-width: 200px;
+    }
+}

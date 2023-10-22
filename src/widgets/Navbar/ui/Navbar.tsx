@@ -8,8 +8,8 @@ import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import cls from './Navbar.module.scss';
 import { Button } from '@/shared/ui/redesigned/Button';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
