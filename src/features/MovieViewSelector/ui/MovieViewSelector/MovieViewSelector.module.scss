@@ -1,0 +1,11 @@
+.MovieViewSelector {
+    .notSelected {
+        fill: var(--secondary-color);
+    }
+}
+
+.MovieViewSelectorRedesigned {
+    .notSelected {
+        color: var(--light-bg-redesigned);
+    }
+}
