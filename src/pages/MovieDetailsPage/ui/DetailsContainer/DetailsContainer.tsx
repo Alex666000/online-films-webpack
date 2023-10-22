@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Card } from '@/shared/ui/redesigned/Card';
-import { MovieDetails } from '@/entities/Movie/ui/MovieDetails/MovieDetails';
+import { MovieDetails } from '../../../../entities/Movie/ui/MovieDetails/MovieDetails';
 
 interface DetailsContainterProps {
     className?: string;

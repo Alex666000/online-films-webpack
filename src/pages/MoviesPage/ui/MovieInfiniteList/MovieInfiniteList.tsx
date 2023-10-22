@@ -8,7 +8,7 @@ import {
     getMoviesPageView,
 } from '../../model/selectors/moviesPageSelectors';
 import { getMovies } from '../../model/slices/moviesPageSlice';
-import { MovieList } from '@/entities/Movie/ui/MovieList/MovieList';
+import { MovieList } from '../../../../entities/Movie/ui/MovieList/MovieList';
 
 interface MovieInfiniteListProps {
     className?: string;

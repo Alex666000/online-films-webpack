@@ -1,12 +1,9 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
 import { Card as CardRedesigned } from '@/shared/ui/redesigned/Card';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { MovieView } from '../../model/consts/movieConsts';
 import cls from './MovieListItem.module.scss';
-import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
 
 interface MovieListItemSkeletonProps {
     className?: string;
@@ -17,17 +14,9 @@ export const MovieListItemSkeleton = memo(
     (props: MovieListItemSkeletonProps) => {
         const { className, view } = props;
 
-        const mainClass = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => cls.MovieListItemRedesigned,
-            off: () => cls.MovieListItem,
-        });
+        const mainClass = cls.MovieListItemRedesigned;
 
-        const Skeleton = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => SkeletonRedesigned,
-            off: () => SkeletonDeprecated,
-        });
+        const Skeleton = SkeletonRedesigned;
 
         if (view === MovieView.BIG) {
             const cardContent = (
@@ -59,44 +48,20 @@ export const MovieListItemSkeleton = memo(
                         cls[view],
                     ])}
                 >
-                    <ToggleFeatures
-                        feature="isAppRedesigned"
-                        on={
-                            <CardRedesigned border="round" className={cls.card}>
-                                {cardContent}
-                            </CardRedesigned>
-                        }
-                        off={
-                            <CardDeprecated className={cls.card}>
-                                {cardContent}
-                            </CardDeprecated>
-                        }
-                    />
+                    <CardRedesigned border="round" className={cls.card}>
+                        {cardContent}
+                    </CardRedesigned>
                 </div>
             );
         }
 
         const cardContent = (
             <>
-                <ToggleFeatures
-                    feature="isAppRedesigned"
-                    on={
-                        <Skeleton
-                            width="100%"
-                            height={150}
-                            border="32px"
-                            className={cls.img}
-                        />
-                    }
-                    off={
-                        <div className={cls.imageWrapper}>
-                            <Skeleton
-                                width={200}
-                                height={200}
-                                className={cls.img}
-                            />
-                        </div>
-                    }
+                <Skeleton
+                    width="100%"
+                    height={150}
+                    border="32px"
+                    className={cls.img}
                 />
                 <div className={cls.infoWrapper}>
                     <Skeleton width={130} height={16} />
@@ -107,19 +72,9 @@ export const MovieListItemSkeleton = memo(
 
         return (
             <div className={classNames(mainClass, {}, [className, cls[view]])}>
-                <ToggleFeatures
-                    feature="isAppRedesigned"
-                    on={
-                        <CardRedesigned border="round" className={cls.card}>
-                            {cardContent}
-                        </CardRedesigned>
-                    }
-                    off={
-                        <CardDeprecated className={cls.card}>
-                            {cardContent}
-                        </CardDeprecated>
-                    }
-                />
+                <CardRedesigned border="round" className={cls.card}>
+                    {cardContent}
+                </CardRedesigned>
             </div>
         );
     },

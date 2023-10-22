@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Movie } from '../types/movie';
 import { MovieDetailsSchema } from '../types/movieDetailsSchema';
-import { fetchMovieById } from '@/entities/Movie/model/services/fetchMovieById/fetchMovieById';
+import { fetchMovieById } from '../services/fetchMovieById/fetchMovieById';
 
 const initialState: MovieDetailsSchema = {
     isLoading: false,

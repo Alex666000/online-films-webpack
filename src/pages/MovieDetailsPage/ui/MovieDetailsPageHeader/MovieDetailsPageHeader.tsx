@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { getRouteMovieEdit, getRouteMovies } from '@/shared/const/router';
 import { getCanEditMovie } from '../../model/selectors/movie';
-import { getMovieDetailsData } from '@/entities/Movie/model/selectors/movieDetails';
+import { getMovieDetailsData } from '../../../../entities/Movie/model/selectors/movieDetails';
 
 interface MovieDetailsPageHeaderProps {
     className?: string;

@@ -10,13 +10,11 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from '@/widgets/Page';
 import { MoviePageGreeting } from '@/features/moviePageGreeting';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
 import { moviesPageReducer } from '../../model/slices/moviesPageSlice';
 import { initMoviesPage } from '../../model/services/initMoviesPage/initMoviesPage';
 import { MovieInfiniteList } from '../MovieInfiniteList/MovieInfiniteList';
-import { MoviesPageFilters } from '../MoviesPageFilters/MoviesPageFilters';
 import { fetchNextMoviesPage } from '../../model/services/fetchNextMoviesPage/fetchNextMoviesPage';
 import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 import cls from './MoviesPage.module.scss';
@@ -44,35 +42,17 @@ const MoviesPage = (props: MoviesPageProps) => {
     });
 
     const content = (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <StickyContentLayout
-                    left={<ViewSelectorContainer />}
-                    right={<FiltersContainer />}
-                    content={
-                        <Page
-                            data-testid="MoviesPage"
-                            onScrollEnd={onLoadNextPart}
-                            className={classNames(
-                                cls.MoviesPageRedesigned,
-                                {},
-                                [className],
-                            )}
-                        >
-                            <MovieInfiniteList className={cls.list} />
-                            <MoviePageGreeting />
-                        </Page>
-                    }
-                />
-            }
-            off={
+        <StickyContentLayout
+            left={<ViewSelectorContainer />}
+            right={<FiltersContainer />}
+            content={
                 <Page
                     data-testid="MoviesPage"
                     onScrollEnd={onLoadNextPart}
-                    className={classNames(cls.MoviesPage, {}, [className])}
+                    className={classNames(cls.MoviesPageRedesigned, {}, [
+                        className,
+                    ])}
                 >
-                    <MoviesPageFilters />
                     <MovieInfiniteList className={cls.list} />
                     <MoviePageGreeting />
                 </Page>

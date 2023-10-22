@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { getUserAuthData } from '@/entities/User';
-import { getMovieDetailsData } from '@/entities/Movie/model/selectors/movieDetails';
+import { getMovieDetailsData } from '../../../../entities/Movie/model/selectors/movieDetails';
 
 export const getCanEditMovie = createSelector(
     getMovieDetailsData,

@@ -4,7 +4,7 @@ import {
     MovieBlockType,
     MovieImageBlockComponent,
     MovieTextBlockComponent,
-} from '@/entities/Movie';
+} from '../..';
 
 export const renderMovieBlock = (block: MovieBlock) => {
     switch (block.type) {

@@ -13,7 +13,6 @@ import {
     TextSize,
 } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
@@ -21,7 +20,6 @@ import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import cls from './MovieDetails.module.scss';
-import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import {
     getMovieDetailsData,
@@ -93,11 +91,7 @@ const Redesigned = () => {
 };
 
 export const MovieDetailsSkeleton = () => {
-    const Skeleton = toggleFeatures({
-        name: 'isAppRedesigned',
-        on: () => SkeletonRedesigned,
-        off: () => SkeletonDeprecated,
-    });
+    const Skeleton = SkeletonRedesigned;
     return (
         <VStack gap="16" max>
             <Skeleton
@@ -139,13 +133,7 @@ export const MovieDetails = memo((props: MovieDetailsProps) => {
             />
         );
     } else {
-        content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={<Redesigned />}
-                off={<Deprecated />}
-            />
-        );
+        content = <Redesigned />;
     }
 
     return (

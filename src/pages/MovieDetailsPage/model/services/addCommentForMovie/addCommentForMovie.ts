@@ -3,7 +3,7 @@ import { getUserAuthData } from '@/entities/User';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { Comment } from '@/entities/Comment';
 import { fetchCommentsByMovieId } from '../fetchCommentsByMovieId/fetchCommentsByMovieId';
-import { getMovieDetailsData } from '@/entities/Movie/model/selectors/movieDetails';
+import { getMovieDetailsData } from '../../../../../entities/Movie/model/selectors/movieDetails';
 
 export const addCommentForMovie = createAsyncThunk<
     Comment,

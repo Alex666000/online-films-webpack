@@ -3,9 +3,8 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { MovieListItemSkeleton } from '../MovieListItem/MovieListItemSkeleton';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Movie, MovieView } from '@/entities/Movie';
+import { Movie, MovieView } from '../..';
 import { MovieListItem } from '../MovieListItem/MovieListItem';
 import cls from './MovieList.module.scss';
 
@@ -52,47 +51,22 @@ export const MovieList = memo((props: MovieListProps) => {
     }
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <HStack
-                    wrap="wrap"
-                    gap="16"
-                    className={classNames(cls.MovieListRedesigned, {}, [])}
-                    data-testid="MovieList"
-                >
-                    {movies.map((item) => (
-                        <MovieListItem
-                            movie={item}
-                            view={view}
-                            target={target}
-                            key={item.id}
-                            className={cls.card}
-                        />
-                    ))}
-                    {isLoading && getSkeletons(view)}
-                </HStack>
-            }
-            off={
-                <div
-                    className={classNames(cls.MovieList, {}, [
-                        className,
-                        cls[view],
-                    ])}
-                    data-testid="MovieList"
-                >
-                    {movies.map((item) => (
-                        <MovieListItem
-                            movie={item}
-                            view={view}
-                            target={target}
-                            key={item.id}
-                            className={cls.card}
-                        />
-                    ))}
-                    {isLoading && getSkeletons(view)}
-                </div>
-            }
-        />
+        <HStack
+            wrap="wrap"
+            gap="16"
+            className={classNames(cls.MovieListRedesigned, {}, [])}
+            data-testid="MovieList"
+        >
+            {movies.map((item) => (
+                <MovieListItem
+                    movie={item}
+                    view={view}
+                    target={target}
+                    key={item.id}
+                    className={cls.card}
+                />
+            ))}
+            {isLoading && getSkeletons(view)}
+        </HStack>
     );
 });

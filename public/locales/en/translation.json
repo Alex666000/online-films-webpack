@@ -61,7 +61,7 @@
     "Произошла ошибка при загрузке фильма": {
         "": "There was an error loading the movie"
     },
-  "Комедия": "Comedy",
+    "Комедия": "Comedy",
     "Драма": "Drama",
     "Фантастика": "Fantasy"
 }

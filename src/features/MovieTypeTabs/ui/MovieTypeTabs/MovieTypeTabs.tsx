@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { TabItem, Tabs as TabsDeprecated } from '@/shared/ui/deprecated/Tabs';
-import { ToggleFeatures } from '@/shared/lib/features';
+import { TabItem } from '@/shared/ui/deprecated/Tabs';
 import { Tabs } from '@/shared/ui/redesigned/Tabs';
 import { MovieType } from '@/entities/Movie';
 
@@ -46,25 +45,12 @@ export const MovieTypeTabs = memo((props: MovieTypeTabsProps) => {
     );
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <Tabs
-                    direction="column"
-                    tabs={typeTabs}
-                    value={value}
-                    onTabClick={onTabClick}
-                    className={classNames('', {}, [className])}
-                />
-            }
-            off={
-                <TabsDeprecated
-                    tabs={typeTabs}
-                    value={value}
-                    onTabClick={onTabClick}
-                    className={classNames('', {}, [className])}
-                />
-            }
+        <Tabs
+            direction="column"
+            tabs={typeTabs}
+            value={value}
+            onTabClick={onTabClick}
+            className={classNames('', {}, [className])}
         />
     );
 });
