@@ -19,11 +19,11 @@ const Template: ComponentStory<typeof MovieDetails> = (args) => (
 
 const movie: Movie = {
     id: '1',
-    title: 'Javascript news',
+    title: 'Терминатор',
     subtitle: 'Что нового в JS за 2022 год?',
-    img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
-    movieRating: 1022,
-    duration: '26.02.2022',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSonJ7sW51zOBhIldGOzZuYcU5FOb-bLMSvfQ&usqp=CAU',
+    movieRating: 7.7,
+    duration: '112 минут',
     type: [MovieType.COMEDY],
     user: {
         id: '1',

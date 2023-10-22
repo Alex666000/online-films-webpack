@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { MovieDetails } from '../../../../entities/Movie/ui/MovieDetails/MovieDetails';
 
-interface DetailsContainterProps {
+interface DetailsContainerProps {
     className?: string;
 }
 
-export const DetailsContainer = memo((props: DetailsContainterProps) => {
+export const DetailsContainer = memo((props: DetailsContainerProps) => {
     const { className } = props;
     const { id } = useParams<{ id: string }>();
 
