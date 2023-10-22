@@ -86,5 +86,4 @@ const MoviesPage = (props: MoviesPageProps) => {
         </DynamicModuleLoader>
     );
 };
-// @ts-ignore
 export default memo(MoviesPage);
