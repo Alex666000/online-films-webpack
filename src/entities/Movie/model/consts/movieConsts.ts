@@ -1,7 +1,7 @@
 export enum MovieSortField {
-    VIEWS = 'views',
+    movieRating = 'movieRating',
     TITLE = 'title',
-    CREATED = 'createdAt',
+    CREATED = 'duration',
 }
 
 export enum MovieBlockType {

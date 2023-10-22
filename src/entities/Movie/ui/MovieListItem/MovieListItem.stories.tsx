@@ -20,8 +20,8 @@ const movie = {
     title: 'Javascript news asfasjf asfjkask f',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
-    views: 1022,
-    createdAt: '26.02.2022',
+    movieRating: 1022,
+    duration: '26.02.2022',
     user: {
         id: '1',
         username: 'Ulbi tv',

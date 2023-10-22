@@ -5,7 +5,7 @@ import { Card } from '@/shared/ui/redesigned/Card';
 import { MovieAdditionalInfo } from '@/widgets/MovieAdditionalInfo';
 import cls from './AdditionalInfoContainer.module.scss';
 import { getRouteMovieEdit } from '@/shared/const/router';
-import { getMovieDetailsData } from '@/entities/Movie/model/selectors/movieDetails';
+import { getMovieDetailsData } from '../../../../entities/Movie/model/selectors/movieDetails';
 
 export const AdditionalInfoContainer = memo(() => {
     const movie = useSelector(getMovieDetailsData);
@@ -27,8 +27,8 @@ export const AdditionalInfoContainer = memo(() => {
             <MovieAdditionalInfo
                 onEdit={onEditMovie}
                 author={movie.user}
-                createdAt={movie.createdAt}
-                views={movie.views}
+                duration={movie.duration}
+                movieRating={movie.movieRating}
             />
         </Card>
     );

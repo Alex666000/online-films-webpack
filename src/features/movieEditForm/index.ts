@@ -1,4 +1,4 @@
-// Форма создания статьи
+// Форма создания фильма
 export interface MovieEditFormSchema {
     id: string;
 }

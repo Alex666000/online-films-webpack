@@ -7,19 +7,19 @@ import cls from './MovieImageBlockComponent.module.scss';
 import { MovieImageBlock } from '../../model/types/movie';
 import { ToggleFeatures } from '@/shared/lib/features';
 
-interface ArticleImageBlockComponentProps {
+interface MovieImageBlockComponentProps {
     className?: string;
     block: MovieImageBlock;
 }
 
 export const MovieImageBlockComponent = memo(
-    (props: ArticleImageBlockComponentProps) => {
+    (props: MovieImageBlockComponentProps) => {
         const { className, block } = props;
         const { t } = useTranslation();
 
         return (
             <div
-                className={classNames(cls.ArticleImageBlockComponent, {}, [
+                className={classNames(cls.MovieImageBlockComponent, {}, [
                     className,
                 ])}
             >

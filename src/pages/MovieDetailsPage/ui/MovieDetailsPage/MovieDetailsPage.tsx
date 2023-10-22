@@ -19,7 +19,7 @@ import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
 import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
 import { MovieDetailsComments } from '../MovieDetailsComments/MovieDetailsComments';
 import { MovieRecommendationsList } from '@/features/movieRecommendationsList';
-import { MovieDetails } from '@/entities/Movie/ui/MovieDetails/MovieDetails';
+import { MovieDetails } from '../../../../entities/Movie/ui/MovieDetails/MovieDetails';
 
 interface MovieDetailsPageProps {
     className?: string;

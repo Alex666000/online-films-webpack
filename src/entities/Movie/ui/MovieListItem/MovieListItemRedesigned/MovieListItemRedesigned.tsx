@@ -14,7 +14,7 @@ import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { MovieListItemProps } from '../MovieListItem';
 import { getRouteMovieDetails } from '@/shared/const/router';
-import { MovieBlockType, MovieTextBlock, MovieView } from '@/entities/Movie';
+import { MovieBlockType, MovieTextBlock, MovieView } from '../../..';
 
 export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
     const { className, movie, view, target } = props;
@@ -26,10 +26,13 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
             <Text bold text={movie.user.username} />
         </>
     );
-    const views = (
+    const movieRating = (
         <HStack gap="8">
             <Icon Svg={EyeIcon} />
-            <Text text={String(movie.views)} className={cls.views} />
+            <Text
+                text={String(movie.movieRating)}
+                className={cls.movieRating}
+            />
         </HStack>
     );
 
@@ -43,7 +46,7 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
                 padding="24"
                 max
                 data-testid="MovieListItem"
-                className={classNames(cls.ArticleListItem, {}, [
+                className={classNames(cls.MovieListItem, {}, [
                     className,
                     cls[view],
                 ])}
@@ -51,7 +54,7 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
                 <VStack max gap="16">
                     <HStack gap="8" max>
                         {userInfo}
-                        <Text text={movie.createdAt} />
+                        <Text text={movie.duration} />
                     </HStack>
                     <Text title={movie.title} bold />
                     <Text title={movie.subtitle} size="s" />
@@ -76,7 +79,7 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
                                 {t('Читать далее...')}
                             </Button>
                         </AppLink>
-                        {views}
+                        {movieRating}
                     </HStack>
                 </VStack>
             </Card>
@@ -88,7 +91,7 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
             data-testid="MovieListItem"
             target={target}
             to={getRouteMovieDetails(movie.id)}
-            className={classNames(cls.ArticleListItem, {}, [
+            className={classNames(cls.MovieListItem, {}, [
                 className,
                 cls[view],
             ])}
@@ -104,8 +107,8 @@ export const MovieListItemRedesigned = memo((props: MovieListItemProps) => {
                     <Text title={movie.title} className={cls.title} />
                     <VStack gap="4" className={cls.footer} max>
                         <HStack justify="between" max>
-                            <Text text={movie.createdAt} className={cls.date} />
-                            {views}
+                            <Text text={movie.duration} className={cls.date} />
+                            {movieRating}
                         </HStack>
                         <HStack gap="4">{userInfo}</HStack>
                     </VStack>

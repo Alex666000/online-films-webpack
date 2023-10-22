@@ -26,8 +26,8 @@ export interface Movie {
     user: User;
     subtitle: string;
     img: string;
-    views: number;
-    createdAt: string;
+    movieRating: number;
+    duration: string;
     type: MovieType[];
     blocks: MovieBlock[];
 }

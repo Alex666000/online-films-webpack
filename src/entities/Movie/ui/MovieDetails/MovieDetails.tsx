@@ -28,9 +28,9 @@ import {
     getMovieDetailsError,
     getMovieDetailsIsLoading,
 } from '../../model/selectors/movieDetails';
-import { movieDetailsReducer } from '@/entities/Movie/testing';
-import { renderMovieBlock } from '@/entities/Movie/ui/MovieDetails/renderBlock';
-import { fetchMovieById } from '@/entities/Movie/model/services/fetchMovieById/fetchMovieById';
+import { movieDetailsReducer } from '../../testing';
+import { renderMovieBlock } from './renderBlock';
+import { fetchMovieById } from '../../model/services/fetchMovieById/fetchMovieById';
 
 interface MovieDetailsProps {
     className?: string;
@@ -57,11 +57,11 @@ const Deprecated = () => {
                 />
                 <HStack gap="8" className={cls.movieInfo}>
                     <Icon className={cls.icon} Svg={EyeIcon} />
-                    <TextDeprecated text={String(movie?.views)} />
+                    <TextDeprecated text={String(movie?.movieRating)} />
                 </HStack>
                 <HStack gap="8" className={cls.movieInfo}>
                     <Icon className={cls.icon} Svg={CalendarIcon} />
-                    <TextDeprecated text={movie?.createdAt} />
+                    <TextDeprecated text={movie?.duration} />
                 </HStack>
             </VStack>
             {movie?.blocks.map(renderMovieBlock)}

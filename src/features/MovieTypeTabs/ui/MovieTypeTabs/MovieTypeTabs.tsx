@@ -20,19 +20,19 @@ export const MovieTypeTabs = memo((props: MovieTypeTabsProps) => {
         () => [
             {
                 value: MovieType.ALL,
-                content: t('Все статьи'),
+                content: t('Все фильмы'),
             },
             {
                 value: MovieType.COMEDY,
-                content: t('Айти'),
+                content: t('Комедия'),
             },
             {
                 value: MovieType.FANTASY,
-                content: t('Экономика'),
+                content: t('Драма'),
             },
             {
                 value: MovieType.DRAMA,
-                content: t('Наука'),
+                content: t('Фантастика'),
             },
         ],
         [t],

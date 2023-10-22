@@ -1,5 +1,5 @@
 let currentMovieId = '';
-describe('Пользователь заходит на страницу статьи', () => {
+describe('Пользователь заходит на страницу фильма', () => {
     beforeEach(() => {
         cy.login();
         cy.createMovie().then((movie) => {
@@ -10,7 +10,7 @@ describe('Пользователь заходит на страницу стат
     afterEach(() => {
         cy.removeMovie(currentMovieId);
     });
-    it('И видит содержимое статьи', () => {
+    it('И видит содержимое фильма', () => {
         cy.getByTestId('MovieDetails.Info').should('exist');
     });
     it('И видит список рекоммендаций', () => {

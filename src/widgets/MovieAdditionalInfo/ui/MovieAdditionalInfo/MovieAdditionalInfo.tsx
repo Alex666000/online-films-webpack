@@ -10,13 +10,13 @@ import { Button } from '@/shared/ui/redesigned/Button';
 interface MovieAdditionalInfoProps {
     className?: string;
     author: User;
-    createdAt: string;
-    views: number;
+    duration: string;
+    movieRating: number;
     onEdit: () => void;
 }
 
 export const MovieAdditionalInfo = memo((props: MovieAdditionalInfoProps) => {
-    const { className, author, createdAt, views, onEdit } = props;
+    const { className, author, duration, movieRating, onEdit } = props;
     const { t } = useTranslation();
 
     return (
@@ -24,10 +24,10 @@ export const MovieAdditionalInfo = memo((props: MovieAdditionalInfoProps) => {
             <HStack gap="8">
                 <Avatar src={author.avatar} size={32} />
                 <Text text={author.username} bold />
-                <Text text={createdAt} />
+                <Text text={duration} />
             </HStack>
             <Button onClick={onEdit}>{t('Редактировать')}</Button>
-            <Text text={t('{{count}} просмотров', { count: views })} />
+            <Text text={t('{{count}} просмотров', { count: movieRating })} />
         </VStack>
     );
 });

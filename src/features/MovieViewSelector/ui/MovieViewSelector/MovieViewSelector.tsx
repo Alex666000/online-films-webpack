@@ -13,8 +13,8 @@ import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import cls from './MovieViewSelector.module.scss';
 import { MovieView } from '@/entities/Movie';
+import cls from './MovieViewSelector.module.scss';
 
 interface MovieViewSelectorProps {
     className?: string;

@@ -7,19 +7,19 @@ import cls from './MovieTextBlockComponent.module.scss';
 import { MovieTextBlock } from '../../model/types/movie';
 import { ToggleFeatures } from '@/shared/lib/features';
 
-interface ArticleTextBlockComponentProps {
+interface MovieTextBlockComponentProps {
     className?: string;
     block: MovieTextBlock;
 }
 
 export const MovieTextBlockComponent = memo(
-    (props: ArticleTextBlockComponentProps) => {
+    (props: MovieTextBlockComponentProps) => {
         const { className, block } = props;
         const { t } = useTranslation();
 
         return (
             <div
-                className={classNames(cls.ArticleTextBlockComponent, {}, [
+                className={classNames(cls.MovieTextBlockComponent, {}, [
                     className,
                 ])}
             >

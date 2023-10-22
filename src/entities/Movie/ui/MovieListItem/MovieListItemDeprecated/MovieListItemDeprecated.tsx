@@ -18,16 +18,19 @@ import {
     MovieTextBlock,
     MovieTextBlockComponent,
     MovieView,
-} from '@/entities/Movie';
+} from '../../..';
 
 export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
     const { className, movie, view, target } = props;
     const { t } = useTranslation();
 
     const types = <Text text={movie.type.join(', ')} className={cls.types} />;
-    const views = (
+    const movieRating = (
         <>
-            <Text text={String(movie.views)} className={cls.views} />
+            <Text
+                text={String(movie.movieRating)}
+                className={cls.movieRating}
+            />
             <Icon Svg={EyeIcon} />
         </>
     );
@@ -40,7 +43,7 @@ export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
         return (
             <div
                 data-testid="MovieListItem"
-                className={classNames(cls.ArticleListItem, {}, [
+                className={classNames(cls.MovieListItem, {}, [
                     className,
                     cls[view],
                 ])}
@@ -52,7 +55,7 @@ export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
                             text={movie.user.username}
                             className={cls.username}
                         />
-                        <Text text={movie.createdAt} className={cls.date} />
+                        <Text text={movie.duration} className={cls.date} />
                     </div>
                     <Text title={movie.title} className={cls.title} />
                     {types}
@@ -77,7 +80,7 @@ export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
                                 {t('Читать далее...')}
                             </Button>
                         </AppLink>
-                        {views}
+                        {movieRating}
                     </div>
                 </Card>
             </div>
@@ -89,7 +92,7 @@ export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
             data-testid="MovieListItem"
             target={target}
             to={getRouteMovieDetails(movie.id)}
-            className={classNames(cls.ArticleListItem, {}, [
+            className={classNames(cls.MovieListItem, {}, [
                 className,
                 cls[view],
             ])}
@@ -102,11 +105,11 @@ export const MovieListItemDeprecated = memo((props: MovieListItemProps) => {
                         src={movie.img}
                         className={cls.img}
                     />
-                    <Text text={movie.createdAt} className={cls.date} />
+                    <Text text={movie.duration} className={cls.date} />
                 </div>
                 <div className={cls.infoWrapper}>
                     {types}
-                    {views}
+                    {movieRating}
                 </div>
                 <Text text={movie.title} className={cls.title} />
             </Card>

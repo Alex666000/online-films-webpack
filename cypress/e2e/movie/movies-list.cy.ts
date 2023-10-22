@@ -4,7 +4,7 @@ describe('Пользователь заходит на страницу со с�
             cy.visit('movies');
         });
     });
-    it('и статьи успешно подгружаются', () => {
+    it('и фильмы успешно подгружаются', () => {
         cy.getByTestId('movieList').should('exist');
         cy.getByTestId('movieListItem').should('have.length.greaterThan', 3);
     });

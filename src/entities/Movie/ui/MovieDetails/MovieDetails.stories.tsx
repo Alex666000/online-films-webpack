@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { MovieDetails } from './MovieDetails';
-import { Movie, MovieBlockType, MovieType } from '@/entities/Movie';
+import { Movie, MovieBlockType, MovieType } from '../..';
 
 export default {
     title: 'entities/Movie/MovieDetails',
@@ -22,8 +22,8 @@ const movie: Movie = {
     title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
-    views: 1022,
-    createdAt: '26.02.2022',
+    movieRating: 1022,
+    duration: '26.02.2022',
     type: [MovieType.COMEDY],
     user: {
         id: '1',

@@ -18,8 +18,8 @@ const MovieEditPage = memo((props: MovieEditPageProps) => {
     return (
         <Page className={classNames(cls.MovieEditPage, {}, [className])}>
             {isEdit
-                ? t('Редактирование статьи с ID = ') + id
-                : t('Создание новой статьи')}
+                ? t('Редактирование фильма с ID = ') + id
+                : t('Добавление нового фильма')}
         </Page>
     );
 });

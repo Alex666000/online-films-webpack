@@ -47,7 +47,7 @@ export const MovieSortSelector = memo((props: MovieSortSelectorProps) => {
                 content: t('названию'),
             },
             {
-                value: MovieSortField.VIEWS,
+                value: MovieSortField.movieRating,
                 content: t('просмотрам'),
             },
         ],

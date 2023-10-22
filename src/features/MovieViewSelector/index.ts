@@ -1,1 +1,3 @@
-export { MovieViewSelector } from '@/features/MovieViewSelector/ui/MovieViewSelector/MovieViewSelector';
+import { MovieViewSelector } from './ui/MovieViewSelector/MovieViewSelector';
+
+export { MovieViewSelector };

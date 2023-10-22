@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { MovieViewSelector } from './MovieViewSelector';
+import { MovieViewSelector } from '../..';
 
 export default {
     title: 'features/MovieViewSelector',

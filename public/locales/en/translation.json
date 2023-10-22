@@ -26,9 +26,6 @@
     "Профиль": "Profile",
     "Фильм не найдена": "Movie not found",
     "Фильмы": "Movies",
-    "Произошла ошибка при загрузке статьи": {
-        "": "An error occurred while loading the movie."
-    },
     "Комментарии отсутствуют": "There are no comments",
     "Введите текст комментария": "Enter the comment text",
     "Отправить": "Send",
@@ -38,31 +35,33 @@
     "убыванию": "descending",
     "Айти": "IT",
     "Экономика": "Economics",
-    "Все статьи": "All movies",
+    "Все фиьмы": "All movies",
     "Наука": "Science",
     "Сортировать по": "Sort BY",
     "дате создания": "created date",
     "Настройки": "Settings",
     "Настройки пользователя": "User Settings",
     "названию": "name",
-    "просмотрам": "views",
-    "Создание новой статьи": "Create new movie",
-    "Редактирование статьи с ID = ": "Edit movie with ID = ",
-    "Ulbi TV App": "Ulbi TV App",
-    "Создать статью": "Create movie",
+    "просмотрам": "movieRating",
+    "Добавление нового фильма": "Create new movie",
+    "Редактирование фильма с ID = ": "Edit movie with ID = ",
+    "Aleksandr": "Aleksandr",
+    "Добавить фильм": "Create movie",
     "Профиль пользователя": "User profile",
     "Закрыть": "Close",
-    "{{count}} просмотров_zero": "{{count}} views",
+    "{{count}} просмотров_zero": "{{count}} movieRating",
     "{{count}} просмотров_one": "{{count}} view",
-    "{{count}} просмотров_other": "{{count}} views",
+    "{{count}} просмотров_other": "{{count}} movieRating",
     "Это главная страница": {
         " Тут будет контент для неё": "This is the main page. There will be content for her"
     },
-    "Aleksandr Bogdanov": "Aleksandr Bogdanov",
-  "Оцените фильм": "Оцените фильм",
-    "Оставьте свой отзыв о фильме, это поможет улучшить качество": "Оставьте свой отзыв о фильме, это поможет улучшить качество",
-  "Фильмы не найдены": "Фильмы не найдены",
-  "Произошла ошибка при загрузке фильма": {
-    "": "Произошла ошибка при загрузке фильма."
-  }
+    "Оцените фильм": "Rate the movie",
+    "Оставьте свой отзыв о фильме, это поможет улучшить качество": "Leave your review about the movie, this will help improve the quality",
+    "Фильмы не найдены": "Movies not found",
+    "Произошла ошибка при загрузке фильма": {
+        "": "There was an error loading the movie"
+    },
+  "Комедия": "Comedy",
+    "Драма": "Drama",
+    "Фантастика": "Fantasy"
 }

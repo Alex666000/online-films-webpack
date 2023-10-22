@@ -4,9 +4,9 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
 import { useMovieFilters } from '../../lib/hooks/useMovieFilters';
-import { MovieSortSelector } from '@/features/MovieSortSelector';
 import { MovieViewSelector } from '@/features/MovieViewSelector';
 import { MovieTypeTabs } from '@/features/MovieTypeTabs';
+import { MovieSortSelector } from '@/features/MovieSortSelector';
 import cls from './MoviesPageFilters.module.scss';
 
 interface MoviesPageFiltersProps {
