@@ -1,31 +1,25 @@
 .MoviesFilters {
-  width: 264px;
+    width: 264px;
 }
 
 @media (max-width: 650px) {
-  .moviesFilters {
-    max-width: 202px;
-    margin-top: 0;
-  }
+    .moviesFilters {
+        max-width: 202px;
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 590px) {
-  .moviesFilters {
-    max-width: 205px;
-    margin-left: -50px;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 500px) {
-  .MoviesFilters {
-
-  }
+    .moviesFilters {
+        max-width: 205px;
+        margin-left: -50px;
+        padding: 5px;
+    }
 }
 
 @media (max-width: 515px) {
-  .MoviesFilters {
-    max-width: 164px;
-    padding: 5px;
-  }
+    .MoviesFilters {
+        max-width: 164px;
+        padding: 5px;
+    }
 }

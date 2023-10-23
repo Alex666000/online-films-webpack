@@ -30,6 +30,7 @@ module.exports = {
     rules: {
         'unused-imports/no-unused-imports': 'error',
         "react/jsx-props-no-spreading": "off",
+        "react/self-closing-comp": "off",
         "storybook/prefer-pascal-case": "off",
         'react/jsx-filename-extension': [
             2,

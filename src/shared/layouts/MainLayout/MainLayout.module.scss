@@ -39,7 +39,6 @@
 }
 
 @media (max-width: 870px) {
-
     .MainLayout {
         .content {
             max-width: 380px;
@@ -53,18 +52,7 @@
     .sidebar {
         padding: 5px;
     }
-    .MainLayout {
-        .content {
-            padding: 5px;
-        }
-    }
 
-}
-
-@media (max-width: 515px) {
-    .sidebar {
-        padding: 5px;
-    }
     .MainLayout {
         .content {
             padding: 5px;

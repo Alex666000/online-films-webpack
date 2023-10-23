@@ -15,7 +15,7 @@
         "eslint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
         "eslint:ts:fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
         "stylelint:scss": "npx stylelint \"**/*.scss\"",
-        "stylelint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+        "style-lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
         "jest:unit-test": "jest --config ./config/jest/jest.config.ts",
         "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
         "test:ui:json": "node scripts/generate-visual-json-report.js",
