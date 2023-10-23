@@ -15,11 +15,11 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import cls from './LoginForm.module.scss';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
+import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
     className?: string;
